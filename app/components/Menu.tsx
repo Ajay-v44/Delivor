@@ -18,7 +18,7 @@ const Menu = () => {
             ) : (
                 <Image src="/close.png" alt="" width={20} height={20} onClick={() => setOpen(false)} />
             )}
-            <div>
+            <div className='bg-red-500 text-white absolute left-0 top-24 w-full h-[calc(100vh-6rem)] flex flex-col gap-8 items-center justify-center text-3xl z-10'>
                 {links.map(items=>(
                     <Link href={'item.url'} key={items.id}>{items.title}</Link>
                 ))}
