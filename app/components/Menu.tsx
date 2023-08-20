@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import React, { useState } from 'react'
+import CartIcon from './CartIcon';
 
 const links=[
     {id:1,title:"Homepage",url:"/"},
@@ -10,7 +11,8 @@ const links=[
     {id:4,title:"Contact",url:"/"},
 ];
 const Menu = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+    const user=false
     return (
         <div>
             {!open ? (
@@ -22,9 +24,12 @@ const Menu = () => {
                 {links.map(items=>(
                     <Link href={'item.url'} key={items.id}>{items.title}</Link>
                 ))}
+               {!user? <Link href="/login">Login</Link>:
+               <Link href="/order">Orders</Link>}
+               <Link href="/cart"><CartIcon/></Link>
             </div>
         </div>
     )
 }
 
-export default Menu
+export default Menu 
