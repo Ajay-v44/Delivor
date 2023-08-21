@@ -1,36 +1,36 @@
 "use client"
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
-const data=[
+const data = [
     {
-        id:1,
-        title:"always fresh & always crispy & always hot",
-        image:"/slide1.png"
+        id: 1,
+        title: "always fresh & always crispy & always hot",
+        image: "/slide1.png"
     },
     {
-        id:2,
-        title:"we deliver your order where ever you are in",
-        image:"/slide2.png"
+        id: 2,
+        title: "we deliver your order where ever you are in",
+        image: "/slide2.png"
 
     },
     {
-        id:3,
-        title:"the best pizza to share with your family",
-        image:'/slide3.jpg'
+        id: 3,
+        title: "the best pizza to share with your family",
+        image: '/slide3.jpg'
     },
 ];
 
 const slider = () => {
     const [currentSlide, setcurrentSlide] = useState(0)
     useEffect(() => {
-   const interval=setInterval(
-    ()=>setcurrentSlide(prev=>prev+1)
-   ,2000);
-   return () => clearInterval(interval);
-    
-     
-    },[])
-    
+        const interval = setInterval(
+            () => setcurrentSlide(prev => (prev === data.length - 1 ? 0 : prev + 1))
+            , 2000);
+        return () => clearInterval(interval);
+
+
+    }, [])
+
     return (
         <div className='flex flex-col h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)]'>
             <div className='h-1/2 flex items-center flex-col gap-0 text-red-500 font-bold'>
@@ -39,7 +39,7 @@ const slider = () => {
             </div>
 
             <div className='w-full h-1/2 relative'>
-            <Image src={data[currentSlide].image} alt="" fill className='object-cover' />
+                <Image src={data[currentSlide].image} alt="" fill className='object-cover' />
 
             </div>
 
