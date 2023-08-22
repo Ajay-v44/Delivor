@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { featuredProducts } from './data'
 
 const Featured = () => {
   return (
@@ -7,29 +8,32 @@ const Featured = () => {
       {/* WRAPPER */}
       <div className='w-max flex'>
         {/* SINGLE ITEM */}
+        {
+          featuredProducts.map((item) => (
+            <div key={item.id} className='w-screen h-[60vh] flex flex-col items-center justify-around p-4 hover:bg-fuchsia-50 transition-all duration-300 md:w-[50vw] xl:w[33w] xl:h-[90vh]'>
+              {/* image container  */}
+              {item.img && (
+                <div className='relative flex-1 w-full hover:rotate-[60deg] transition-all duration-500'>
+                  <Image src={item.img} alt="" fill className='object-contain' />
 
-        <div className='w-screen h-[60vh] flex flex-col items-center justify-around p-4'>
-          {/* image container  */}
-          <div className='relative flex-1 w-full'>
-            <Image src="/temporary/p1.png" alt="" fill className='object-contain'/>
+                </div>
+              )}
 
-          </div>
-
-          {/* text container */}
-          <div className=''>
-            <h1>Title</h1>
-            <p>Desc</p>
-            <span>123</span>
-            <button>Add to cart</button>
+              {/* text container */}
+              <div className='flex-1 flex flex-col gap-4 '>
+                <h1 className='text-xl font-bold uppercase xl:text-2xl 2xl:text-3xl '>{item.title}</h1>
+                <p className="p-4 2xl:p-8" >{item.desc}</p>
+                <span className='text-xl font-bold'>${item.price}</span>
+                <button className='bg-red-500 tet-white p-2 rounded-md'>Add to cart</button>
 
 
-          </div>
-        </div>
-
+              </div>
+            </div>
+          ))}
       </div>
 
     </div>
-  )
-}
+  );
+};
 
 export default Featured
