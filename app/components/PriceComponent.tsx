@@ -7,23 +7,26 @@ type props={
 
 const PriceComponent = ({price,id,options}:props ) => {
   return (
-    <div>
-        <h2>${price.toFixed(2)}</h2>
+    <div className="flex flex-col gap-4">
+    
+        <h2 className='text-2xl font-bold'>${price.toFixed(2)}</h2>
        { /* options container */}
-       <div className=''>
+       <div className='flex gap-4'>
         {options?.map(option=>(
-            <button key={option.title}>{option.title}</button>
+            <button key={option.title} className='p-2 ring-1 ring-red-400 rounded-md '>{option.title}</button>
         ))}
        </div>
-
-       <div className=''>
-        <div className=''>
+{/* Quantity and add button container */}
+       <div className='flex justify-between items-center'>
+        <div className='flex justify-between w-full p-3 ring-1 ring-red-500'>
             <span>Quantity</span>
-            <div>
-                
+            <div className='flex gap-4 items-center'>
+                <button>{'<'}</button>
+                <span>1</span>
+                <button>{'>'}</button>
             </div>
         </div>
-
+                <button className='uppercase w-56 bg-red-500 text-white p-3 ring-1 ring-red-500'>Add to Cart</button>
        </div>
     </div>
   )
