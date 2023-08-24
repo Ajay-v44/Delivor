@@ -1,6 +1,8 @@
+import PriceComponent from '@/app/components/PriceComponent'
 import { singleProduct } from '@/app/components/data'
 import Image from 'next/image'
 import React from 'react'
+
 
 const SingleProductPage = () => {
     return (
@@ -17,6 +19,8 @@ const SingleProductPage = () => {
             <div className=''>
                 <h1>{singleProduct.title}</h1>
                 <p>{singleProduct.desc}</p>
+                <PriceComponent price={singleProduct.price} id={singleProduct.id} options={singleProduct.options}/>
+
             </div>
         </div>
     )
