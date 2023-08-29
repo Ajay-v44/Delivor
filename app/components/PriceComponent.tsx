@@ -8,13 +8,14 @@ type props = {
 
 const PriceComponent = ({ price, id, options }: props) => {
     const [total, settotal] = useState(price);
-    const [quantity, setquantity] = useState(1);
+     const [quantity, setquantity] = useState(1);
     const [selected, setselected] = useState(0);
 
     useEffect(()=>{
-        settotal(quantity=(options?price+options[selected].additionalPrice:price))
+        settotal(
+            quantity*(options?price+options[selected].additionalPrice:price));
 
-    },[quantity,selected])
+    },[quantity,selected,options,price]);
     return (
         <div className="flex flex-col gap-4">
 
