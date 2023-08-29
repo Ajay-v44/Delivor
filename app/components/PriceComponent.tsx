@@ -1,4 +1,5 @@
-import React from 'react'
+"use client";
+import React, { useEffect, useState } from 'react'
 type props={
     price:number;
     id:number;
@@ -6,6 +7,9 @@ type props={
 }
 
 const PriceComponent = ({price,id,options}:props ) => {
+    const [total, settotal] = useState(price);
+    const [quantity, setquantity] = useState(1);
+    const [selected, setselected] = useState(0);
   return (
     <div className="flex flex-col gap-4">
     
@@ -29,7 +33,7 @@ const PriceComponent = ({price,id,options}:props ) => {
                 <button className='uppercase w-56 bg-red-500 text-white p-3 ring-1 ring-red-500'>Add to Cart</button>
        </div>
     </div>
-  )
+  ) 
 }
 
 export default PriceComponent
