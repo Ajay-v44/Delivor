@@ -1,34 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Delivor - Food Ordering Web App
 
-## Getting Started
+Delivor is a web application built using TypeScript that allows users to easily order food online. It offers a user-friendly interface for browsing menus, selecting dishes, and placing orders from local restaurants.
 
-First, run the development server:
+![Delivor App Screenshot]
+![Screenshot (151)](https://github.com/Ajay-v44/Delivor/assets/115262085/41a4f531-1392-4558-8bbc-9eeea2619224)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+![Screenshot (153)](https://github.com/Ajay-v44/Delivor/assets/115262085/10519331-8037-4a14-bdc2-fb1d88dbf1db)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Screenshot (152)](https://github.com/Ajay-v44/Delivor/assets/115262085/b0da9a19-62eb-4f4f-b5c2-65e539ac1cba)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features!
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+- Browse restaurant menus and view available dishes.
+- Add items to the cart and customize orders.
+- Place food orders for delivery or pickup.
+- View order history and order details.
+- User authentication and profile management.
+- Restaurant owners can manage their menus and orders.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- TypeScript
+- React.js
+- Next.js
+- Node.js
+- Express.js
+- MongoDB
+- Tailwind CSS
+- Authentication with JWT
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Prerequisites
 
-## Deploy on Vercel
+Before you begin, ensure you have met the following requirements:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Node.js and npm (Node Package Manager) installed.
+- MongoDB database set up.
+- Restaurant data imported into the database (if applicable).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Ajay-v44/delivor.git
+   cd delivor
+
+
+   Visit http://localhost:3000 in your web browser to access the app.
+
+Usage
+Create an account or log in.
+Browse available restaurants and their menus.
+Select dishes and customize your order.
+Add items to the cart and proceed to checkout.
+Place your order and track its status.
+Contributing
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
+Fork the repository.
+Create a new branch for your feature: git checkout -b feature/your-feature-name
+Commit your changes: git commit -m 'Add some feature'
+Push to the branch: git push origin feature/your-feature-name
+Create a pull request on GitHub.
